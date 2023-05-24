@@ -1,6 +1,6 @@
 {
-  "name": "@zenhuzaini/emarsys-sdk-warapper-plugin",
-  "version": "0.0.1",
+  "name": "@srinivassaluru/emarsys-sdk-capacitor-plugin",
+  "version": "0.0.5",
   "description": "Custom Capacitor Plugin To have communication with Emarsys SDK",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -13,18 +13,18 @@
     "ios/Plugin/",
     "ZenhuzainiEmarsysSdkWarapperPlugin.podspec"
   ],
-  "author": "zenhuzaini",
+  "author": "srinivassaluru",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/zenhuzaini/emarsys-sdk-warapper-plugin.git",
-    "directory": "@zenhuzaini/emarsys-sdk-warapper-plugin"
+    "url": "git+ssh://git@github.com/srinivassaluru/emarsys-sdk-capacitor-plugin.git",
+    "directory": "@srinivassaluru/emarsys-sdk-capacitor-plugin"
   },
   "bugs": {
-    "url": "https://github.com/zenhuzaini/emarsys-sdk-warapper-plugin.git/issues"
+    "url": "https://github.com/srinivassaluru/emarsys-sdk-capacitor-plugin.git/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/zenhuzaini"
+    "registry": "https://npm.pkg.github.com/srinivassaluru"
   },
   "keywords": [
     "capacitor",
@@ -49,10 +49,10 @@
   },
   "devDependencies": {
     "@capacitor/android": "^4.0.0",
+    "@capacitor/cli": "^4.6.3",
     "@capacitor/core": "^4.0.0",
     "@capacitor/docgen": "^0.0.18",
     "@capacitor/ios": "^4.0.0",
-    "@capacitor/cli": "^4.6.3",
     "@ionic/eslint-config": "^0.3.0",
     "@ionic/prettier-config": "^1.0.1",
     "@ionic/swiftlint-config": "^1.1.2",
@@ -80,8 +80,11 @@
       "src": "android"
     }
   },
-  "homepage": "https://github.com/zenhuzaini/emarsys-sdk-warapper-plugin#readme",
+  "homepage": "https://github.com/srinivassaluru/emarsys-sdk-capacitor-plugin#readme",
   "directories": {
     "example": "example"
+  },
+  "dependencies": {
+    "@srinivassaluru/emarsys-sdk-capacitor-plugin": "^0.0.3"
   }
 }
