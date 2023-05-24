@@ -23,6 +23,11 @@ npx cap sync
 * [`register()`](#register)
 * [`checkPermissions()`](#checkpermissions)
 * [`clearContact(...)`](#clearcontact)
+* [`setPushTokenFirebase(...)`](#setpushtokenfirebase)
+* [`setPushMessage(...)`](#setpushmessage)
+* [`getUserInfo(...)`](#getuserinfo)
+* [`setUser(...)`](#setuser)
+* [`clearUser()`](#clearuser)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
 
@@ -158,6 +163,73 @@ clearContact(options: SetContactOptions) => Promise<void>
 --------------------
 
 
+### setPushTokenFirebase(...)
+
+```typescript
+setPushTokenFirebase(data: { value: string; }) => Promise<ITokenInitializationStatus>
+```
+
+| Param      | Type                            |
+| ---------- | ------------------------------- |
+| **`data`** | <code>{ value: string; }</code> |
+
+**Returns:** <code>Promise&lt;<a href="#itokeninitializationstatus">ITokenInitializationStatus</a>&gt;</code>
+
+--------------------
+
+
+### setPushMessage(...)
+
+```typescript
+setPushMessage(data: PushMessageDTO) => Promise<{ value: PushMessageDTO; }>
+```
+
+| Param      | Type                                                      |
+| ---------- | --------------------------------------------------------- |
+| **`data`** | <code><a href="#pushmessagedto">PushMessageDTO</a></code> |
+
+**Returns:** <code>Promise&lt;{ value: <a href="#pushmessagedto">PushMessageDTO</a>; }&gt;</code>
+
+--------------------
+
+
+### getUserInfo(...)
+
+```typescript
+getUserInfo(data: UserInformationDTO) => Promise<{ value: unknown; }>
+```
+
+| Param      | Type                                                              |
+| ---------- | ----------------------------------------------------------------- |
+| **`data`** | <code><a href="#userinformationdto">UserInformationDTO</a></code> |
+
+**Returns:** <code>Promise&lt;{ value: unknown; }&gt;</code>
+
+--------------------
+
+
+### setUser(...)
+
+```typescript
+setUser(data: { value: string; }) => Promise<void>
+```
+
+| Param      | Type                            |
+| ---------- | ------------------------------- |
+| **`data`** | <code>{ value: string; }</code> |
+
+--------------------
+
+
+### clearUser()
+
+```typescript
+clearUser() => Promise<void>
+```
+
+--------------------
+
+
 ### Interfaces
 
 
@@ -195,6 +267,31 @@ clearContact(options: SetContactOptions) => Promise<void>
 | Prop        | Type                | Since |
 | ----------- | ------------------- | ----- |
 | **`token`** | <code>string</code> | 1.0.0 |
+
+
+#### ITokenInitializationStatus
+
+| Prop          | Type                 |
+| ------------- | -------------------- |
+| **`status`**  | <code>string</code>  |
+| **`isError`** | <code>boolean</code> |
+
+
+#### PushMessageDTO
+
+| Prop        | Type                |
+| ----------- | ------------------- |
+| **`title`** | <code>string</code> |
+| **`text`**  | <code>string</code> |
+| **`image`** | <code>string</code> |
+
+
+#### UserInformationDTO
+
+| Prop                | Type                |
+| ------------------- | ------------------- |
+| **`firebaseToken`** | <code>string</code> |
+| **`userId`**        | <code>string</code> |
 
 
 ### Type Aliases
